@@ -1,0 +1,22 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+    background: lightslategray;
+    margin: 0 auto;
+    padding: 40px;
+    width: 800px;
+}
+
+h1, h2 {
+    border-bottom: 1px solid #000;
+}
+
+img {
+    border: 1px solid #000;
+}
+
+a {
+    color: #000;
+}
