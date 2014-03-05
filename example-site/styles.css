@@ -15,8 +15,20 @@ h1, h2 {
 
 img {
     border: 1px solid #000;
+    width: 300px;
 }
 
 a {
     color: #000;
+}
+
+.sloth {
+    position: relative;
+}
+
+.caption {
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
 }
