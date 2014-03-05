@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Class 4 ~ HTML/CSS ~ Girl Develop IT</title>
+		<title>Class 4 ~ HTML/CSS ~ Girl Develop It</title>
 
 		<meta name="description" content="This is the official Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers.
 
@@ -38,39 +38,116 @@
 			<div class="slides">
 			  <!-- Opening slide -->
         <section>
-          <img src = "images/gdi_logo_badge.png">
-          <h3>Beginning HTML and CSS</h3>
+          <img src="images/gdi_logo_badge.png">
+          <h3>Newbie HTML and CSS</h3>
           <h4>Class 4</h4>
         </section>
         
         <!-- Welcome-->
-        <section>
-          <h3>Welcome!</h3>
-          <div class = "left-align">
-          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-          <p class ="green">Some "rules"</p>
-          <ul>
-            <li>We are here for you!</li>
-            <li>Every question is important</li>
-            <li>Help each other</li>
-            <li>Have fun</li>
-          </ul>
-          </div>
-        </section>
-        
+        <section class="hide-pdf">
+          <h2>Welcome to Week Four!</h2>
+          <p>Wifi Network: Neo Guest</p>
+          <p>Wifi Password: No password!</p>
+          <hr />
+          <p class="left-align">Slides for today are available at: <a href="http://www.bitly.com/gdic-newbie-class4">http://www.bitly.com/gdic-newbie-class4</a></p>
+      </section>
+
+      <!-- Review -->
+      <section>
+        <h3>Review: Div Element</h3>
+        <div class="left" style="width: 50%">
+          <p class="left-align">Divs group other HTML elements together.</p>
+          <p class="left-align">IDs and classes are often added to divs to apply CSS styles to a specific group of HTML elements</p>
+        </div>
+        <div class="right" style="width: 50%">
+          <img src="images/basic-layout.png" alt="Basic web page layout with header, 
+          content, sidebar, and footer" />
+        </div>
+      </section>
+
+      <!-- Live Site Example -->
+      <section>
+        <h3>Div Example</h3>
+        <a href="http://gdicbus.github.io">http://gdicbus.github.io</a>
+        <br /><br />
+        <img class="no-styles" src="images/gdicbus-site.png" alt="Girl Develop It Columbus website" />
+      </section>
+
+      <!-- Review -->
+      <section>
+        <h3>Example: Div and Span Elements</h3>
+        <p class="left-align">HTML code:</p>
+<pre style="width: 100%"><code class="html">&lt;div class="sponsors">
+  &lt;p>
+    This is a paragraph all about our sponsors. One of our 
+    favorite companies of all time is 
+    &lt;span class="company-name">Neo&lt;/span>. 
+    We also have some other really fantastic sponsors, 
+    like &lt;span class="company-name">Company #2&lt;/span>
+    and &lt;span class="company-name">Company #3&lt;/span>.
+  &lt;/p>
+&lt;/div>
+</pre></code>
+        <p class="left-align">CSS:</p>
+<pre style="width: 100%"><code>.company-name {
+  color: purple;
+  font-weight: bold;
+}
+</pre></code>
+      </section>
+
+      <section>
+        <h3>Example Output</h3>
+        <p class="left-align">On the website, the paragraph would look like:</p>
+
+        <div class="sponsors" style="background-color: #fff; color: #000; padding: 20px">
+          <p class="left-align">This is a paragraph all about our sponsors. One of our favorite companies of all time is <span class="red" style="font-weight: bold">Neo</span>. We also have some other really fantastic sponsors, like <span class="red" style="font-weight: bold">Company #2</span> and <span class="red" style="font-weight: bold">Company #3</span>.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h3>IDs and Classes</h3>
+        <ul>
+          <li>You can name your classes and IDs <span class="yellow">anything</span> you want.</li>
+          <li>A class you've created can be used many times throughout a page.</li>
+          <li>An ID can only be used once per page.</li>
+          <li>Classes and IDs add meaning and allow for easier styling.</li>
+        </ul> 
+      </section>
+
+      <section>
+        <h3>Review: Box Model</h3>
+        <img src="images/box-model.png" alt="Depiction of the box model" />
+      </section>
+
+      <section>
+        <h3>Position Property</h3>
+        <p>Three possible values:</p>
+        <ul>
+          <li>Static</li>
+          <li>Relative</li>
+          <li>Absolute</li>
+        </ul>
+      </section>
+
         <section>
          <h3>Static Positioning</h3>
-         <div class = "left-align">
-         <p>HTML elements are positioned static by default.</p>
-         <p>Static elements are positioned in the normal ﬂow of the page</p>
-         <p>Static elements ignore top, bottom, right or left property specifications.</p>
+         <div class="left-align">
+         <p><span class="yellow">Static</span> positioning is the default for HTML elements.</p>
+         <p>Static elements are positioned in the normal ﬂow of the page.</p>
+         <br />
+<pre style="width:100%"><code>p {
+  position: static;
+}
+</code></pre>
          </div>
        </section>
        
        <section>
          <h3>Static Positioning</h3>
          <p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
-<pre><code class = "html">
+<pre><code class="html">
 &lt;img src="images/cookie1.png"/>
 &lt;img src="images/cookie2.png"/>
 &lt;img src="images/cookie3.png"/>
@@ -107,112 +184,94 @@
        <!-- Relative Positioning-->
        <section>
          <h3>Relative Positioning</h3>
-         <div class = "left-align">
+         <div class="left-align">
          <ul>
-         <li>Takes the element out of the normal flow, allowing it to be moved to the top, left, right or bottom. </li>
-         <li>Does not affect the elements surrounding it.</li>
-         <li>Makes an element a "positioning context" in which to position other elements relative to it.</li>
-         <li>Relative positioning and absolute positioning are used together.</li>
-         </ul>
-         </div>
-       </section>
-       
-       <section>
-         <h3>Relative Positioning</h3>
-         <p>The "relative" value will still put the element in the normal flow, but then offset it according to top/left/right/bottom properties.</p>
-
-<pre><code class = "html">
-  .relative{
-    position: relative; 
-    left: 80px; 
-    top: 20px;
-    height: 100px; 
-    background-color: yellow;
-  }
+          <li>Allows top, left, right, and/or bottom properties to be applied in order to remove the element from the normal flow. </li>
+          <li>The top/left/right/bottom properties specify how to position the element <span class="yellow">relative</span> to where it would normally be placed.</li>
+        </ul>
+<pre><code class="html">.relative{
+  position: relative; 
+  left: 80px; 
+  top: 20px;
+  height: 100px; 
+  background-color: yellow;
+}
 </code></pre>
- <div style="border:2px solid black;">
+ <div style="border:2px solid white;">
  <div style="position: relative; left: 80px; top: 20px;
    height: 100px; background-color: yellow; color:black; text-align:left">
    Hello, hi!
  </div>
- </div>
-       </section>
-       <!-- Absolute positioning-->
-       <section >
-         <h3>Absolute Positioning</h3>
-         <div class = "left-align">
-         <ul>
-         <li>Positions element outside of the normal flow.</li>
-         <li>An absolutely positioned element is offset from its container block, positioned relative.</li>
-         <li>Its container block is the first element that has a position other than static.</li>
-         <li>If no such element is found, the container block is &lt;html>.</li>
-         <li>Other elements act as if it's not there.</li>
-         <li>Determined by its oﬀset values in the properties top, bottom, right and left.</li>
-         </ul>
+ </div>          
          </div>
        </section>
        
-       <section  style="border: 1px solid black">
+       <!-- Absolute positioning-->
+       <section style="border: 2px solid white; padding: 40px">
          <h3>Absolute Positioning</h3>
-         <p>The "absolute" value will take the element out of the normal flow and position it in relation to the window (or the closest non-static element).</p>
-<pre><code class = "html">
-  .top{
-    position: absolute; 
-    top: -40px; 
-    right: 10px; 
-    background-color: yellow
-  }
+         <p class="left-align">Absolute positioning takes the element out of the normal flow and positions it in relation to the window (or the closest relative element).</p>
+<pre><code class="html">.top{
+  position: absolute; 
+  top: 0; 
+  right: 10px; 
+  background-color: yellow
+}
 </code></pre>
-<pre><code class = "html">
-  .bottom{
-    position: absolute; 
-    bottom: -40px; 
-    left:60px; 
-    background-color: green
-  }
+<pre><code class="html">.bottom{
+  position: absolute; 
+  bottom: 0; 
+  left:60px; 
+  background-color: green
+}
 </code></pre>
          <div>
-         <div style="position: absolute; top: -40px; right: 10px; 
+         <div style="position: absolute; top: 0; right: 10px; 
            background-color: yellow; color:black">
           Up here
          </div>
-       <div style="position: absolute; bottom: -40px; left:60px; 
+       <div style="position: absolute; bottom: 0; left:60px; 
          background-color: green">
           Down here
          </div>
          </div>
        </section>
+
+       <section >
+         <h3>Absolute Positioning</h3>
+         <div class="left-align">
+         <ul>
+            <li>Positions the element outside of the normal flow.</li>
+            <li>Other elements act as if the absolutely positioned element is not there.</li>
+            <li>Relative positioning and absolute positioning are used together.</li>
+            <li>The absolutely positioned element is offset from either 1) the &lt;html> element, or 2) the nearest relative element.</li>
+         </ul>
+         </div>
+       </section>
+       
        <section>
-       	<h3>Example: Absolute Positioning</h3>
-       	<div class="left left-align" style="width: 45%;">
-       	<p>Here's an example of an image with a caption absolutely positioned over top of it.</p>
-       	<br/>
-       	<p>The containing div has a position of relative, and the caption has a position of absolute.</p>
-       	</div>
-       	<div class="right" style="width: 45%;">
-       		<img src="images/example-absolute.png" style="border: none; box-shadow: none;"/>
-       	</div>
+       	<h3>Demo: Absolute Positioning</h3>
+        <p>Real-life use case: adding a caption to an image.</p>
+        <br />
+     		<img src="images/caption-demo.png" class="no-styles" alt="Sloth picture for caption demo" />
        </section>
        <section>
        <h3>Z-index</h3>
-         <p class="left-align">When you use positioning to move elements out of the normal flow of content, elements can overlap. You can change the order of overlapping with z-index.</p>
-         <p class="left-align">The element with highest z-index goes on top.</p>
-<pre><code class ="html">
-  .bottom{
-    position: absolute; 
-    bottom: 10px; 
-    left:60px; 
-    background-color: yellow;
-  }
+         <p class="left-align">When you use positioning to move elements out of the normal flow of content, elements can overlap. Change the order of overlapping with z-index.</p>
+         <p class="left-align">The element with the highest z-index goes on top.</p>
+<pre><code class="html">.bottom{
+  position: absolute; 
+  bottom: 10px; 
+  left:60px; 
+  background-color: yellow;
+}
 </code></pre>
-<pre><code class ="html">
-  .top{
-    position: absolute; 
-    bottom: 15px; 
-    left:60px; 
-    background-color: green; 
-    z-index: 2;
-  }
+<pre><code class="html">.top{
+  position: absolute; 
+  bottom: 15px; 
+  left:60px; 
+  background-color: green; 
+  z-index: 2;
+}
 </code></pre>
         <div style="position: absolute; bottom: -20px; left:60px; 
           background-color: yellow; color:black"> Bottom </div>
@@ -222,92 +281,199 @@
        <section>
        	<h3>Let's Develop it!</h3>
        	<p>Let's add some positioning.</p>
-       	<p>Let's create a div that contains an image and a caption, and position the caption absolutely overtop the image.</p>
+        <ul>
+          <li>Create a div that contains an image and a caption.</li>
+          <li>Position the caption absolutely overtop the image.</li>
+        </ul>
        	
        </section>
        <!-- Float-->
        <section>
          <h3>Float</h3>
-         <div class = "left-align">
+         <div class="left-align">
           	<ul>
-          	<li>"Floating" an element takes it in the normal flow, as far to the left or right of it's containing element as possible.</li>
-          	<li>Any other elements, such as paragraphs or lists, will wrap around the floated element.</li>
-          	<li>Always specify a width when floating an element, otherwise the element is likely to take up the whole page and not appear floated.</li>
-            <li>You can specify a) whether an element is floated or not, and b) which side it ﬂoats on.</li>
+              <li>The element remains within the normal flow but moves as far to the left or right of the containing element as possible.</li>
+            	<li>Any other elements, such as paragraphs or lists, will wrap around the floated element.</li>
+            	<li><span class="yellow">Always specify a width</span> when floating an element, otherwise the element is likely to take up the whole page and not appear floated.</li>
+              <li>You can specify which side an element ﬂoats on.</li>
           	</ul>
          </div>
        </section>
        <!--example float-->
        <section>
        <h3>Float: Example</h3>
-       <p>Below a &lt;blockquote> is floated to the left, allowing text to wrap around it on the right</p>
-       <img src="images/example-floatbq.png" alt="example float" />
+       <p>Below a div containing an image and caption is floated to the right, allowing text to wrap around it.</p>
+       <img src="images/msnbc-floating-example.png" alt="example float" />
        </section>
        <section>
          <h3>Float</h3>
-<pre><code class ="html">
-  .float{
-    float:left;
-    width:200px;
-    background:yellow;
-  }
+         <p class="left-align">The CSS:</p>
+<pre style="width:100%"><code class="html">.float {
+  float: left;
+  width: 200px;
+  background: yellow;
+}
 </code></pre>
-        <div style ="float:left; text-align: left;width:200px;background:yellow; color:black; padding: 10px;">
+        <p class="left-align">The output:</p>
+
+        <div style="float:left;text-align:left;width:200px;background:yellow;color:black;margin-right:20px;padding:10px;">
           <small>Hi, I'm a yellow box with black text.<br/>
           I like to hang out on the left side.</small><br/>
         </div>
-        <div class = "left-align">Not floating element</div>
-        <div class = "left-align">Not floating element</div>
-         <div class = "left-align">Not floating element with wrapping Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+        <div class="left-align">Not floating element</div>
+        <div class="left-align">Not floating element</div>
+         <div class="left-align">Not floating element with wrapping Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
        </section>
        
        <section>
-       <h3>Using floats to place elements side by side</h3>	
-       <p>If you want two block level elements to be side by side, you need to float both elements. One left, and one right.</p>
-       <img src="images/example-float-column.png" />
+         <h3>Float: Placing Elements Side By Side</h3>	
+         <p>If you want two block level elements to be side by side, you need to float both elements. One left, and one right.</p>
+         <img src="images/example-float-column.png" />
        </section>
        <!-- Clear-->
        <section>
          <h3>Clear</h3>
          <ul>
-         <li>Clearing tells the element on which side (right, left, both) other elements <strong>cannot</strong> appear. </li>
-         <li>If you had an image floated left, and you did not want the paragraph to appear next to it, you would add <strong>clear: left;</strong> to the paragraph.</li>
-         <li>Clearing both sides makes sure ﬂoats don’t ﬂow past the clear element.</li>
+           <li>Clear tells the element on which side (right, left, both) other elements <span class="yellow">cannot</span> appear. </li>
+           <li>If you had an image floated left, and you did not want paragraphs to appear next to it, you would add <span class="yellow">clear: left;</span> to the paragraph.</li>
          </ul>
-<pre><code class = "html">
-  clear: right;
+<pre><code class="html">p {
   clear: left;
-  clear: both;
+}
 </code></pre>
        </section> 
        
        <section>
-          <h3>Clear</h3>
- <pre><code class ="html">
-   .float{
-     float:left;
-     width:50px;
-     background:yellow;
-   }
-   .clear-left{
-     clear:left
-   }
- </code></pre>
-         <div style ="float:left;width:50px;background:yellow; color:black; ">
-           hi<br/>
-           hi<br/>
-           hi<br/>
+          <h3>Example: Clear</h3>
+ <pre style="width:100%"><code class ="html">img {
+  float:left;
+}
+
+p {
+  clear:left
+}
+</code></pre>
+         <div style ="float:left;">
+           <img src="images/cookie1.png">
          </div>
-         <div class = "left-align">Not floating element</div>
-         <div class = "left-align">Not floating element</div>
-         <div class = "left-align" style="clear: left;">Non-floating element with a class of <strong>.clear-left</strong></div>
+         <div class="left-align">Not floating element</div>
+         <div class="left-align">Not floating element</div>
+         <div class="left-align" style="clear: left;">Non-floating element with a class of <strong>.clear-left</strong></div>
         </section>
         
         <!-- Exercise-->
        <section>
-         <h3>Let's Develop It</h3>
-         <p>Let's float our side bar and content areas.</p>
-       </section>       <!-- Question-->
+         <h3>Let's Develop It!</h3>
+          <ul>
+            <li>Add a sidebar - add a div element with a class of "sidebar" to your website.</li>
+            <li>Float your sidebar and your content area so they're next to each other.</li>
+            <li>Experiment with floating an image so paragraphs wrap around it.</li>
+          </ul>
+       </section>       
+
+       <section>
+        <h3>Putting your site on the web</h3>
+        <ol>
+          <li>Register a domain.</li>
+          <li>Get (server) hosting for that domain.</li>
+          <li>Upload your HTML, CSS, image files, etc. to the server.</li>
+        </ol>
+
+        <br /><br />
+
+        <p class="left-align">OR use Github Pages for free: <a href="http://pages.github.com/">Github Pages</a>.</p>
+       </section>
+
+       <section>
+        <h3>Domains</h3>
+        <ul>
+          <li>This is a domain: http://www.something.com</li>
+          <li>Generally, fairly cheap (under $10/yr).</li>
+          <li>Can get it through the same company as your hosting, or a separate company. One example: <a href="http://www.namecheap.com">namecheap.com</a>.</li>
+        </ul>
+       </section>
+
+       <section>
+        <h3>Hosting</h3>
+        <ul>
+          <li>Once you have a domain, you need a hosting service to host it.</li>
+          <li>A hosting service provides you with a <span class="yellow">server</span>.</li>
+          <li>The server is what makes your site viewable from any browser, on any network, anywhere.</li>
+          <li>Recommend: <a href="http://www.asmallorange.com">http://www.asmallorange.com</a> ($5/mo)</li>
+        </ul>
+
+        <br /><br />
+        <div style="width: 500px; height: 217px; padding: 20px; display: block; margin: auto; background-color:#fff">
+          <img class="no-styles" src="images/client-server.png" />
+        </div>
+       </section>
+
+       <section>
+        <h3>Where to go from here?</h3>
+        <ul>
+          <li>Complete a HTML/CSS project - put a website on the web!</li>
+          <li>Responsive Design - create websites that scale for mobile devices.</li>
+          <li>JavaScript - add interactive elements to your website.</li>
+          <li>Learn a back-end programming language, like Ruby or PHP.</li>
+        </ul>
+       </section>
+
+       <section>
+        <h3>GDI Resources</h3>
+        <ul>
+          <li>Classes
+            <ul>
+              <li>Beyond the Basics of HTML/CSS - 3/4</li>
+              <li>Newbie JavaScript - April</li>
+              <li>Newbie Ruby - May</li>
+            </ul>
+          </li>
+          <li>Mentor Program: <a href="http://bit.ly/gdic-mentor-signup">http://bit.ly/gdic-mentor-signup</a></li>
+          <li>Code and Coffees (3/11), and Hack Nights (tomorrow!)</li>
+          <li><a href="http://gdicbus.github.io">GDIC Resources Page</a></li>
+          <li>Join the <a href="https://groups.google.com/forum/#!forum/girl-develop-it-columbus">mailing list</a> for advanced class and event updates.</li>
+          <li> <a href="http://columbus.startupweekend.org/">Startup Weekend</a> - 3/28-3/30</li>
+        </ul>
+       </section>
+
+       <section>
+        <h3>Contact Info</h3>
+        <p class="left-align">Kim Hamper (<a href="mailto:kim@girldevelopit.com">kim@girldevelopit.com</a>, <a href="http://www.twitter.com/k_alongthewires">@k_alongthewires</a>)</p>
+        <p class="left-align">TAs: Andrea Jessup, Cindy Payne, Derek Briggs, Bryan Cunningham</p>
+        <br />
+        <div class="left-align">
+          <p>GDIC:</p>
+          <ul>
+            <li><a href="http://www.meetup.com/girldevelopitcbus/events/162381512/">Meetup</a></li>
+            <li><a href="https://www.facebook.com/girldevelopitcbus">Facebook</a></li>
+            <li><a href="https://twitter.com/gdicbus">Twitter</a></li>
+            <li><a href="http://www.linkedin.com/groups/Girl-Develop-It-Columbus-5086530">LinkedIn</a></li>
+            <li><a href="http://girldevelopit.com/">Website</a></li>
+          </ul>
+        </div>
+
+        <br />
+        <p class="left-align">Thank you!</p>
+
+       </section>
+
+       <section>
+          <h3>Let's Develop It!</h3>
+          <p class="left-align">Congrats, you've championed the foundations of HTML/CSS! Now, let's put your knowledge to work...</p>
+          <br />
+          <p class="left-align">Create a website from the design you brought to class today. Leave with something you're proud of!</p>
+          <br />
+          <div class="left-align">
+            <p>Slides:</p>
+            <ul>
+              <li><a href="http://www.bitly.com/gdic-newbie-class1">Class 1</a></li>
+              <li><a href="http://www.bitly.com/gdic-newbie-class2">Class 2</a></li>
+              <li><a href="http://www.bitly.com/gdic-newbie-class-3">Class 3</a></li>
+            </ul>
+          </div>
+       </section>
+
+       <!-- Question-->
         <section>
           <h2>Questions?</h2>
           <div style = "font-size:1200%; height:100%; margin-top:30%" class ="blue">?
