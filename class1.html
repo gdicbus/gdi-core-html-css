@@ -294,8 +294,8 @@
                <li>Opening tag and closing tag
                <li>Tags contain characters that indicate the tags purpose</li>
                <li>Basic structure:
-                  <pre><code class="html">&lt;tagname>Stuff in the middle&lt;/tagname></code></pre>
-                  <pre><code class="html">&lt;p> This is a sample paragraph.&lt;/p></code></pre>
+<pre><code class="html">&lt;tagname>Stuff in the middle&lt;/tagname></code></pre>
+<pre><code class="html">&lt;p> This is a sample paragraph.&lt;/p></code></pre>
               </li>
             </ul>
         </section>
@@ -322,9 +322,9 @@
               <li>These elements are surrounded by <span class="yellow">self-closing tags</span></li>
               <li>
                 The image and break tags are self-closing:
-                <pre><code class = "html">&lt;br /> <br />&lt;img src="your-image.jpg" /></code></pre>
+<pre><code class = "html">&lt;br /> <br />&lt;img src="your-image.jpg" /></code></pre>
                 <strong>Not:</strong>
-                <pre><code class = "html">&lt;br>&lt;/br> <br />&lt;img src="your-image.jpg">&lt;/img></code></pre>
+<pre><code class = "html">&lt;br>&lt;/br> <br />&lt;img src="your-image.jpg">&lt;/img></code></pre>
               </li>
             </ul>
         </section>
@@ -345,7 +345,7 @@
                     <ul>
                     <li>Value is the value assigned to a given attribute.</li>
                     <li>Values must be contained inside quotation marks.</li>
-                    <pre><code class="html">&lt;div id="copyright">&copy; GDI 2013&lt;/div><br />&lt;img src="your-image.jpg" /><br />&lt;a href="http://girldevelopit.com">GDI&lt;/a></code></pre>
+<pre><code class="html">&lt;div id="copyright">&copy; GDI 2013&lt;/div><br />&lt;img src="your-image.jpg" /><br />&lt;a href="http://girldevelopit.com">GDI&lt;/a></code></pre>
             </li>
           </ul>
                 </li>
@@ -358,10 +358,12 @@
             <p class="left-align">The first thing on an HTML page is the doctype, which tells the browser which version of the markup language the page is using.</p>
             <ul class="left" style="width: 100%">
                 <li>
-                    For HTML 4:<br /><pre><code class="html">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 <br /> Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"></code></pre>
+                    For HTML 4:<br />
+<pre><code class="html">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 <br /> Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"></code></pre>
                 </li>
                 <li>
-                    For HTML 5:<br /><pre><code class="html">&lt;!DOCTYPE html></code></pre>
+                    For HTML 5:<br />
+<pre><code class="html">&lt;!DOCTYPE html></code></pre>
                 </li>
             </ul>
             <p class="left-align"><small>* The doctype is case-insensitive: DOCtype, doctype, DocType and DoCtYpe are all valid.</small></p>
@@ -371,8 +373,7 @@
           <h3>HTML Tag</h3>
           <p>After &lt;doctype>, the page content must be
           contained between &lt;html> tags.</p>
-          <pre><code class="html">&lt;!DOCTYPE html><br />&lt;html>
-            <br />&lt;/html></code></pre>
+<pre><code class="html">&lt;!DOCTYPE html><br />&lt;html><br />&lt;/html></code></pre>
         </section>
         
         <section>
@@ -389,17 +390,16 @@
         </section>
         <section>
           <h3>Head and Body Tags</h3>
-          <pre><code class = "html">
-            &lt;!DOCTYPE html>
-            &lt;html>
-               &lt;head>
-                &lt;title>Title of the page &lt;/title>
-               &lt;/head>
-               &lt;body>
-                The page content here.
-               &lt;/body>
-            &lt;/html>
-          </code></pre>
+<pre><code class = "html">&lt;!DOCTYPE html>
+&lt;html>
+   &lt;head>
+    &lt;title>Title of the page &lt;/title>
+   &lt;/head>
+   &lt;body>
+    The page content here.
+   &lt;/body>
+&lt;/html>
+</code></pre>
         </section>
         
         <!-- Develop it -->
@@ -699,91 +699,7 @@
             </ul>
         </section>
 
-        <!--Comments-->
-        <section>
-            <h3>Comments</h3>
-            <p>You can add comments to your code that will not be seen by the browser, but only visible when viewing the code.</p>
-            <pre><code>
-&lt;!-- Comment goes here -->
-            </code></pre>
-            <p><small>Comments can be used to organize your code into sections so you (or someone else) can easily understand your code. It can also be used to 'comment out' large chunks of code to hide it from the browser.</small></p>
-            <pre><code>
-&lt;!-- Beginning of header -->
-   &lt;div id="header">Header Content &lt;/div>
-&lt;!-- End of header -->
-
-&lt;!--   
-  &lt;ol>
-    &lt;li>List Item&lt;/li>
-    &lt;li>Another List Item&lt;/li>
-  &lt;/ol> 
---> 
-            </code></pre>
-        </section>        
-        
-        <section>
-          <h3>Tables</h3>
-          <p>Tables are a way to represent complex information in a grid format.</p>
-          <p>Tables are made up of rows and columns.</p>
-          
-          <div>
-          <div class = "left" style = "width:50%">
-<pre><code>
-&lt;table>
-  &lt;tr> 
-    &lt;th>Head&lt;/th>
-    &lt;th>Head&lt;/th>
-  &lt;/tr>
-  &lt;tr> 
-    &lt;td>Data&lt;/td>
-    &lt;td>Data&lt;/td>
-  &lt;/tr>
-&lt;/table>
-</code></pre>
-          </div>
-          <div class = "left left-align" style = "width:50%">
-            <table style="border: 1px solid">
-              <tr> 
-                <th style="border: 1px solid">Head</th>
-                <th style="border: 1px solid">Head</th>
-              </tr>
-              <tr> 
-                <td style="border: 1px solid">Data</td>
-                <td style="border: 1px solid">Data</td>
-              </tr>
-            </table>
-          </div>
-          <div class ="clear"></div>
-          </div>
-        </section>
-        
-        <!-- Table Examples -->
-        <section>
-            <h3>Tables: Examples</h3>
-            <p>Tables can be styled with CSS to add zebra striping or to highlight important rows/columns.</p>
-            <img src="images/example-tables.png" alt="Example of tables" />
-        </section>
-
-        
-        <!-- Character codes-->
-        <section>
-          <h3>Character codes</h3>
-          <p>There are character codes for many different characters in many different languages.</p>
-          <div class="left" style="width:50%">
-          <ul>
-            <li>Ampersand: &amp;amp; &amp;</li>
-            <li>Apostrophe: &amp;#39; &#39;</li>
-            <li>Copyright symbol: <br />&amp;copy; &copy;</li>
-            <li>Degree sign: &amp;deg; &deg;</li>
-            <li>Less than sign: &amp;lt; &lt;</li>
-            <li>A full list is available at <a href="http://htmlandcssbook.com/extras/html-escape-codes/" target="_blank">htmlandcssbook.com</a></li>
-          </ul>
-          </div>
-          <div class="right" style="width: 50%;">
-            <img src="images/example-characters.png" alt="Example of Characters"/>
-          </div>
-          
-        </section>        <!-- -->
+        <!-- -->
         <section>
           <h2>Questions?</h2>
           <div style = "font-size:1200%; height:100%; margin-top:40%" class ="blue">?
