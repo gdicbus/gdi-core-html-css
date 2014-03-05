@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Class 3 ~ HTML/CSS ~ Girl Develop IT</title>
+		<title>Class 3 ~ HTML/CSS ~ Girl Develop It</title>
 
 		<meta name="description" content="This is the official Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers.
 
@@ -36,73 +36,96 @@
 
 			<!-- Any section element inside of this container is displayed as a slide-->
 			<div class="slides">
-			  <!-- Opening slide -->
+        <!-- Opening slide -->
         <section>
-          <img src = "images/gdi_logo_badge.png">
-          <h3>Beginning HTML and CSS</h3>
+          <img src="images/gdi_logo_badge.png">
+          <h3>Newbie HTML and CSS</h3>
           <h4>Class 3</h4>
         </section>
         
         <!-- Welcome-->
+        <section class="hide-pdf">
+          <h2>Welcome to Week Three!</h2>
+          <p>Wifi Network: Neo Guest</p>
+          <p>Wifi Password: No password!</p>
+          <hr />
+          <p class="left-align">Slides for today are available at: <a href="http://www.bitly.com/gdic-newbie-class-3">http://www.bitly.com/gdic-newbie-class-3</a></p>
+          <p class="left-align">Take a moment to give us feedback: <a href="http://www.bitly.com/midclass-survey">http://www.bitly.com/midclass-survey</a></p>
+        </section>
+        
+        <!-- Review: Cascading-->
         <section>
-          <h3>Welcome!</h3>
-          <div class = "left-align">
-          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-          <p class ="green">Some "rules"</p>
-          <ul>
-            <li>We are here for you!</li>
-            <li>Every question is important</li>
-            <li>Help each other</li>
-            <li>Have fun</li>
-          </ul>
-          </div>
+          <h3>Review: Cascading</h3>
+          <p class="left-align">CSS stands for <span class="green">C</span>ascading <span class="green">S</span>tyle <span class="green">S</span>heets.</p>
+          <p class="left-align">Styles "cascade" down.</p>
+<pre><code>h1, h2, h3 {
+  color: red;
+  font-family: Helvetica, Arial, sans-serif;
+  /* other styles here */
+}
+
+h2 {
+  color: blue;  
+}</code></pre>
+
+        <p class="left-align">What color will the h2 element be?</p>
         </section>
-        
-         <section>
-        	<h3>What we'll be making today</h3>
-        	<div class="left" style="width: 45%;">
-        		<p>Today we will be making a site from scratch using divs and spans to create a header, footer, sidebar and a content area.</p>
-        	</div>
-        	<div class="right" style="width: 45%;">
-        		<img src="images/session2site.png">
-        	</div>
+
+        <section>
+          <h3>Review: Complex Selectors</h3>
+          <p class="left-align">Comma = "And":</p>
+<pre><code>h1, h2, h3 {
+  color: red;
+}</pre></code>         
+          <p class="left-align">Space = Context:</p>
+<pre><code>#navigation li a {
+  color: orange;
+  text-decoration: none;
+}</pre></code>
+        <br />
+        <p class="left-align">Other questions from last week?</p>
         </section>
-        
+
         <!-- Inline vs. block-->
         <section>
           <h3>Inline vs Block</h3>
-          <div class = "left" style="width: 50%; text-align: left;">
-            <div class = "fragment">
-              <p>So far, we have mostly seen <span class="green">"block"</span> elements</p>
-              <p>They appear on the next line, like paragraphs</p>
+          <div class="left" style="width: 50%; text-align: left;">
+            <div>
+              <p>So far, we have mostly seen <span class="green">"block"</span> elements.</p>
+              <p>They appear on the next line, like paragraphs.</p>
             </div> 
             <br/><br/>
-            <div class = "fragment">
-              <p>There are also <span class="green">"inline"</span> elements</p>
+            <div>
+              <p>There are also <span class="green">"inline"</span> elements.</p>
               <p>They appear on the same line that they are written on.</p>
             </div>
           </div>
-          <div class="right fragment">
+          <div class="right">
           	<img src="images/example-blockinline.png" alt="example of inline and block elements" />
           </div>
         </section>
         <!-- Inline v block again-->
         <section>
-          <h3>Block &amp; Inline Elements,</h3>
+          <h3>Block and Inline Elements</h3>
+          <div class="left-align">
           <ul>
-            <li>CSS divides HTML into two types: inline and block.</li>
+            <li>CSS divides HTML into two types: <span class="green">inline</span> and <span class="green">block</span>.</li>
             <li>After block elements, browsers render a new line.</li>
             <li>Inline elements: img, a, br, em, strong</li>
             <li>Block elements: p, h1, ul, li, almost everything else</li>
           </ul>
+        </div>
+        <br />
+<pre style="width:100%"><code class="html">&lt;p>Paragraph with inline &lt;em>emphasized text&lt;/em>.&lt;/p></code></pre>
+
         </section>
         <section> 
         	<h3>Element: Div</h3>
         		<ul>
-	        		<li>Block level element. Each new div is rendered on a new line.</li>
 	        		<li>A division, or section of content within an HTML page.</li>
+              <li>Block level element. Each div is rendered on a new line.</li>	        		
 	        		<li>Used to group elements to format them with CSS.</li>
-	        		<li>Apply IDs and Classes to divs to control their styles with CSS.</li>
+	        		<li>Apply IDs and classes to divs to control their styles with CSS.</li>
         		</ul>
 <pre><code>&lt;div>
    &lt;p>Content&lt;p>
@@ -115,298 +138,494 @@
    &lt;p>Some more content&lt;p>
 &lt;/div></code></pre>
         </section>
-  <!-- Div continued-->
+        
+        <!-- Div continued-->
         <section>
           <h3>Grouping elements with div</h3>
-          <div class = "left-align">
-          <ul>
-          <li>The div tag is used everywhere to group elements together into sections.</li>
-          <li>For example, what if we want the first 2 paragraphs of a section to be right-aligned, purple & bold, but we don't want any other paragraphs to be right-aligned?</li>
-          <li>We would wrap them in a div element to style them differently.</li>
-          </ul>
-           </div>
-        </section> 
-        
-        <section>
-          <h3>Grouping elements with div, cont.</h3>
-<pre><code class = "html">
-.align-right{
-  text-align:right;
-  color: purple; 
-  font-weight: bold;
-}
-</code></pre>
-
-<pre><code class ="html">
-&lt;div class="align-right">
-  &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p>
-  &lt;p>Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p> 
-&lt;/div>
-&lt;p>Magna aliqua. Ut enim ad minim veniam.&lt;/p> 
-&lt;p>Quis nostrud exercitation ullamco.&lt;/a>
-</code></pre>
-<div style = "text-align:right;font-weight: bold; font-size: 70%;" class = "green">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-  <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
-</div>
-<div class = "left-align" style="font-size: 70%;">
-<p>Magna aliqua. Ut enim ad minim veniam.</p>
-<p>Quis nostrud exercitation ullamco.</a>
-
-</div>
-        </section> 
-        <section>
-          <h3>Let's Develop It</h3>
-         <p class="left-align">Let's create a site using divs to separate content into different sections on our page.</p>
-         <p class="left-align">Create a header, content area, sidebar, and a footer.</p>         
-        </section> 
-        <section>
-        	<h3>Element: Span</h3>
-        	<ul>
-        	<li>Inline element. Each new span is rendered next to each other &amp; only wraps when it reaches the edge of the containing element.</li>
-        	<li>Can be used to apply styles to text inline so as not to break the flow of content.</li>
-        	</ul>
-        </section>     
-        <!-- Span -->
-        <section>
-          <h3>Span</h3>
-          <p>Span is used to apply a specific style inline</p>
-          
-<pre><code class ="html">
-.yellow{
-  color:yellow;
-}
-</code></pre>
-
-<pre><code class ="html">
-&lt;p>Paragraph with &lt;span class ="yellow">yellow&lt;/span> text.&lt;/p>
-</code></pre>
-
-<p>Paragraph with <span class ="yellow">yellow</span> text.</p>
+          <div class="left-align">
+            <div class="left" style="width: 50%; text-align: left;">
+              <p>The div tag is used everywhere to group elements together into sections.</p>
+            </div>
+            <div class="right" style="width: 50%">
+              <img src="images/basic-layout.png" alt="Basic web page layout with header, 
+              content, sidebar, and footer" />
+            </div>
+          </div>
         </section>
-        <!-- Exercise-->
-         <section>
+
+        <section>
+          <h3>Element: Span</h3>
+          <ul>
+           <li>Inline element.</li>
+           <li>Used to apply styles to text inline (e.g. a sentence inside a paragraph).</li>
+          </ul>
+          <br /><br />  
+          <p class="left-align">The code:</p>
+<pre style="width:100%"><code class="html">.warning{
+  color:red;
+}</code></pre>
+
+<pre style="width:100%"><code class="html">&lt;p>An inline &lt;span class="warning">warning&lt;/span>.&lt;/p></code></pre>
+
+<p class="left-align">The output:</p>
+<p>An inline <span style="color:red">warning</span>.</p>
+        </section>
+        
+        <!-- Exercise -->
+        <section>
           <h3>Let's Develop It</h3>
-         <p>Let's add some spans to our content to help highlight some text. </p>
-        </section>      
+          <ul>
+            <li>Separate the content on your site into different sections using divs with classes or IDs of "header", "content", and "footer".</li>
+            <li>Style a sentence or a few words within a paragraph using span and a class.</li>
+          </ul>
+        </section> 
+          
         <!-- Pseudo class-->
         <section>
           <h3>Pseudo-classes, more CSS for links</h3>
-          <div class ="left left-align" style="width:50%">
-          <p>Changing the format of a link when you hover over it is accomplished by using pseudo-classes.</p>
+          <div class="left left-align" style="width:50%">
+          <br />
+          <p>Pseudo-classes can be used to add hover effects to your links.</p>
           <br/>
           <p>CSS pseudo-classes are used to add special effects to some selectors.</p>
           </div>
+          <div class="right" style="width:50%">
           Syntax:	
-<pre><code class ="html">
-selector:pseudo-class
-{
+<pre><code class="html">selector:pseudo-class {
   property:value;	
 }
 </code></pre>
-          Example:
-<pre><code class ="html">
-a:link
-{
-  text-decoration: none;
+          <p>Example:</p>
+<pre><code class="html">a:hover {
+  background-color: blue;
 }
 </code></pre>
+        <a href="#">Some link</a>
+        </div>
         </section>
         
         <!-- Pseudo class-->
         <section>
           <h3>Pseudo-classes, more CSS for links</h3>
-<pre><code class ="html">
-  a:link	{color:#FF0000;} /* unvisited link */
-  a:visited	{color:#00FF00;} /* visited link */
-  a:hover	{color:#FF00FF;} /* mouse over link */
-  a:active	{color:#0000FF;} /* selected link */
-</code></pre>
-          <p>Note: a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective!</p>
-          <p>Note: a:active MUST come after a:hover in the CSS definition in order to be effective!</p>
+<pre><code class="html" style="max-height:none">a:link { /* unvisited link */
+  color:#FF0000;
+}
+
+a:visited { /* visited link */
+  color:#00FF00;
+}
+
+a:hover	{ /* mouse over link */
+  color:#FF00FF;
+}
+
+a:active { /* selected link */
+  color:#0000FF;
+}</code></pre>
+          <p class="left-align"><span class="yellow">Note: </span>a:hover MUST come after a:link and a:visited in the CSS definition, and a:active MUST come after a:hover!</p>
         </section>
        
         <!-- Exercise-->
         <section>
           <h3>Let's Develop It</h3>
-          <p>Add pseudo classes to your links</p>
+          <p>Add pseudo classes to your links.</p>
         </section>
         
         <!-- Box model-->
         <section>
           <h3>Box Model</h3>
-          <img src ="images/box-model.png"/>
+          <img src="images/box-model.png"/>
         </section>
         
         <!-- Padding -->
         <section>
           <h3>Padding</h3>
-          <p>Space between the border and the content</p>
-          <img src ="images/box-model.png"/>
+          <p class="left-align">Space between the border and the content</p>
+          <p class="left-align">Adds to the total width of the box.</p>
+          <img src="images/box-model-padding.png"/>
         </section>
+
         <section>
-          <h3>Padding</h3>
-          <p>Space between the border and the content</p>
-          <p>Adds to the total width of the box.</p>
-          <img src ="images/box-model-padding.png"/>
+          <h3>Padding: Example</h3>
+          <p class="left-align">Space between the border and the content.</p>
+          <p class="left-align">The code:</p>
+<pre><code>#content {
+  border: 3px solid #ffffff;
+  padding: 50px;
+}</code></pre>
+
+<pre><code>&lt;div id="content">
+  &lt;p>Paragraph with some text.&lt;/p>
+&lt;/div>
+</code></pre>
+          
+          <p class="left-align">The output:</p>
+          <div style="border:3px solid #fff; padding:50px">
+            <p class="left-align" style="margin:0">Paragraph with some text.</p>
+          </div>
+          
         </section>
         
         <section>
-          <h3>Padding</h3>
-          15 pixels on all sides
-<pre><code class ="html">
-padding: 15px;
+          <h3>Padding Property</h3>
+          <p class="left-align">50 pixels on all sides:</p>
+<pre><code class="html">padding: 50px;
 </code></pre>
-          10 pixels on top only
-<pre><code class ="html">
-padding-top: 10px;
+          <p class="left-align">10 pixels on top only:</p>
+<pre><code class="html">padding-top: 10px;
 </code></pre>
-          10 on top, 5 on right, 3 on bottom, 5 on left
-<pre><code class ="html">
-padding: 10px 5px 3px 5px;
+          <p class="left-align">10 on top, 5 on right, 3 on bottom, 5 on left:</p>
+<pre><code class="html">padding: 10px 5px 3px 5px;
 </code></pre>  
         </section>
        
         <section>
           <h3>Padding</h3>
-          <p>Four values<p>
-<pre><code class = "html">
-  padding: top right bottom left;
+          <p class="left-align">Four values: top right bottom left (TRBL)<p>
+<pre><code class="html">padding: 10px 5px 3px 5px;
 </code></pre>
-          <p>Two values</p>
-<pre><code class = "html">
-  padding: top/bottom right/left;
+          <p class="left-align">Three values: top right/left bottom<p>
+<pre><code class="html">padding: 30px 20px 10px;
 </code></pre>
-          <p>One value</p>
-<pre><code class = "html">
-  padding: all;
+          <p class="left-align">Two values: top/bottom right/left</p>
+<pre><code class="html">padding: 15px 10px;
+</code></pre>
+          <p class="left-align">One value: all sides</p>
+<pre><code class="html">padding: 50px;
 </code></pre>
         </section>
        
         <section>
           <h3>Padding</h3>
-<pre><code class ="html">
-  padding: 10px 20px 30px 40px;
+<pre><code class="html">padding: 10px 20px 30px 40px;
 </code></pre>
-        <img src ="images/box-model-padding2.png"/>
+        <img src="images/box-model-padding2.png"/>
         </section>
        
         <!-- Border-->
         <section>
           <h3>Border</h3>
-          <p>The edge around the box, specified as "thickness, style, color."</p>
+          <p class="left-align">The edge around the box.</p> 
+          <p class="left-align">Specified as "thickness, style, color."</p>
           <img src ="images/box-model-border.png">
         </section>
         
         <section>
           <h3>Border</h3>
-          <p>A solid red border</p>
-<pre><code class = "html">
-  border: 1px solid #ff0000;
+          <p class="left-align">A solid red border:</p>
+<pre><code>border: 1px solid #ff0000;
 </code></pre>
-          <p>A thick dotted black top border</p>
-<pre><code class ="html">
-  border-top: 4px dotted #000000;
+          <p class="left-align">A thick, dotted, black top border:</p>
+<pre><code>border-top: 4px dotted #000000;
 </code></pre>
-          <p>Two diﬀerent border styles</p>
-<pre><code class ="html">
-  border-top: 1px solid #ff0000;
-  border-bottom: 4px dotted #000000;
+          <p class="left-align">Two different border styles together:</p>
+<pre><code>border-top: 4px dotted #000000;
+border-bottom: 1px solid #ff0000;
 </code></pre>
         </section>
        
         <section>
           <h3>Border - Other Properties</h3>
-<pre><code class ="html">
-  border-width: 10px;
-  border-style: dashed;
-  border-color: #666666;
+          <p class="left-align">You can specify each border property separately, or all three together.</p>
+<pre><code>border-width: 10px;
+border-style: dashed;
+border-color: #666666;
 </code></pre>
-          <p>You can specify each property separately, or all three together.</p>
+          <p class="left-align">Possible border styles:</p>
+          <div class="left-align">
+          <ul>
+            <li>solid</li>
+            <li>double</li>
+            <li>dotted</li>
+            <li>dashed</li>
+          </ul>
+          <ul>
+            <li>groove</li>
+            <li>ridge</li>
+            <li>inset</li>
+            <li>outset</li>
+          </ul>
+          </div>
         </section>
        
         <!-- Margin -->
         <section>
           <h3>Margin</h3>
-          <p>The transparent area around the box that separates it from other elements.</p>
+          <p class="left-align">The whitespace around the box that separates it from other elements.</p>
           <img src ="images/box-model-margin.png"/>
         </section>
         
         <section>
+          <h3>Margin: Example</h3>
+          <p class="left-align">The code:</p>
+<pre><code>#content {
+  border: 3px solid #ffffff;
+  margin-top: 30px;
+  padding: 10px;
+}</code></pre>
+
+<pre><code>&lt;h1>Heading&lt;/h1>
+&lt;div id="content">  
+  &lt;p>Paragraph with some text.&lt;/p>
+&lt;/div>
+</code></pre>
+          
+          <p class="left-align">The output:</p>
+          <h3 class="left-align">Heading</h3>
+          <div style="border:3px solid #fff; padding:10px; margin-top:30px">
+            <p class="left-align" style="padding:0; margin:0">Paragraph with some text.</p>
+          </div>
+          
+        </section>
+
+        <section>
           <h3>Margin</h3>
-          <p>15 pixels on all sides</p>
-<pre><code class = "html">
-  margin: 15px;
+          <p class="left-align">15 pixels on all sides:</p>
+<pre><code class="html">margin: 15px;
 </code></pre>
-          <p>10 on top, 5 on right, 3 on bottom, 5 on left</p>
-<pre><code class ="html">
-  margin: 10px 5px 3px 5px;
+          <p class="left-align">10 on top, 5 on right, 3 on bottom, 5 on left:</p>
+<pre><code class="html">margin: 10px 5px 3px 5px;
 </code></pre>
-          <p>10 pixels on top</p>
-<pre><code class = "html">
-  margin-top: 10px;
+          <p class="left-align">10 pixels on top:</p>
+<pre><code class="html">margin-top: 10px;
 </code></pre>
         </section>
         
         <section>
           <h3>Auto Margin</h3>
-          <p>If a margin is set to auto on a box that has width, it will take up as much space as possible.</p>
-          <p>CENTERED</p>
-<pre><code class ="html">
-  margin: auto;
-  width: 300px;
+          <p class="left-align">If a margin is set to <span class="green">auto</span> on a box that has width, it will take up as much space as possible.</p>
+          <p class="left-align yellow">Centered:</p>
+<pre><code class="html">margin: auto;
+width: 300px;
 </code></pre>
-          <p>FLUSH-RIGHT</p>
-<pre><code class = "html">
-  margin-left: auto;
-  margin-right: 5px;
-  width: 300px;
+          <p class="left-align yellow">Flush-right:</p>
+<pre><code class="html">margin-left: auto;
+margin-right: 5px;
+width: 300px;
 </code></pre>
         </section>
         
-        <!-- Exercise-->
-        <!-- Exercise -->
-		<section>
-			<h3>Let's Develop it!</h3>
-			<p>Let's add some padding, borders, and margins to our divs.</p>
-			<p>Let's center our entire document in the browser.</p>
-		</section>
         <!-- Width-->
-		<section>
-			<h3>Property: Width</h3>
-			<p>Sets the width of an element.</p>
-			<p>Does not include padding or borders, remember these add to the width.</p>
-		</section>
-		<!-- height-->
-		<section>
-			<h3>Property: Height</h3>
-			<p>Sets the height of an element.</p>
-			<p>Does not include padding or borders, remember these add to the width.</p>
-		</section>
-		<!-- Exercise -->
-		<section>
-			<h3>Let's develop it!</h3>
-			<div class="left-align">
-				<p>Add a width &amp; height to our divs.</p>
-				<p>Use IDs to target each div with CSS</p>
-			</div>
-		</section>
+        <section>
+          <h3>Property: Width</h3>
+          <p class="left-align">Sets the width of an element.</p>
+<pre><code class="html">#content {
+  width: 800px;
+  padding: 20px;
+  border: 1px solid #000000;
+}</code></pre>
+          <p class="left-align"><span class="yellow">Remember:</span> padding and borders add to the total width!</p>
+          <p class="left-align">Total width of the #content element: 800px + 40px + 2px</p>
+        </section>
+        
+        <!-- Height-->
+        <section>
+          <h3>Property: Height</h3>
+          <p class="left-align">Sets the height of an element.</p>
+<pre><code class="html">#content {
+  height: 800px;
+  width: 800px;
+  padding: 20px;
+  border: 1px solid #000000;
+}</code></pre>
+          <p class="left-align"><span class="yellow">Note: </span>Elements generally expand to fit the height of your content automatically, so used less often.</p>
+        </section>
+
+        <!-- Box Model with the Inspector -->
+        <section>
+          <h3>Box Model: Using the Inspector</h3>
+          <img src="images/inspector-box-model.png" alt="Box model viewer in the browser inspector">
+        </section>
+
+        <!-- Exercise -->
+    		<section>
+    			<h3>Let's Develop it!</h3>
+    			<ul>
+            <li>Add some padding, borders, and margins to your divs.</li>
+            <li>Center the entire document in the browser.</li>
+            <li>Use the browser inspector to problem-solve!</li>
+          </ul>
+    		</section>
+        
+    <section>
+      <h3>Tables</h3>
+      <p class="left-align">Tables are a way to represent complex information in a grid format.</p>
+      <p class="left-align">Tables are made up of rows and columns.</p>
+      
+      <div>
+      <div class="left" style="width:50%">
+<pre><code>&lt;table>
+  &lt;tr> 
+    &lt;th>Head&lt;/th>
+    &lt;th>Head&lt;/th>
+  &lt;/tr>
+  &lt;tr> 
+    &lt;td>Data&lt;/td>
+    &lt;td>Data&lt;/td>
+  &lt;/tr>
+&lt;/table>
+</code></pre>
+          </div>
+          <br />
+          <div class="left left-align" style = "width:50%">
+            <table style="border: 1px solid">
+              <tr> 
+                <th style="border: 1px solid">Head</th>
+                <th style="border: 1px solid">Head</th>
+              </tr>
+              <tr> 
+                <td style="border: 1px solid">Data</td>
+                <td style="border: 1px solid">Data</td>
+              </tr>
+            </table>
+          </div>
+          <div class="clear"></div>
+          </div>
+        </section>
+        
+        <!-- Table Examples -->
+        <section>
+            <h3>Tables: Examples</h3>
+            <p class="left-align">Tables can be styled with CSS to add zebra striping or to highlight important rows/columns.</p>
+            <img src="images/example-tables.png" alt="Example of tables" />
+        </section>
+
+        <section>
+          <h3>Forms</h3>
+          <p class="left-align">HTML is used to define forms, a programming language (e.g. PHP) is used to process form inputs.</p>
+          <p class="left-align">A simple example with a <span class="yellow">text input</span> and <span class="yellow">submit button</span>:</p>
+<pre style="width:100%"><code style="max-height:none">&lt;form>
+  &lt;label for="name">Name:&lt;/label>
+  &lt;input type="text" name="name" id="name" &lt;>
+
+  &lt;input type="submit" value="Submit" />
+&lt;/form>
+</code></pre>
+          <p class="left-align">The output:</p>
+<pre style="width:100%"><code class="html" style="max-height:none"><form style="padding-bottom:30px">
+  <label for="name">Name:</label>
+  <input type="text" name="name" id="name" style="font-size: 18px" />
+
+  <input type="submit" value="Submit" style="font-size: 18px" />
+</form></code></pre>
+        </section>
+
+        <section>
+          <h3>Forms: Select</h3>
+            <p class="left-align">Use <span class="yellow">&lt;select></span> and <span class="yellow">&lt;option></span> to display a selection box.</p>
+            <p class="left-align">The code:</p>
+<pre><code>&lt;label for="hometown">Hometown:&lt;/label>
+&lt;select name="hometown" id="hometown">
+  &lt;option value="Cleveland">Cleveland&lt;/option>
+  &lt;option value="Columbus">Columbus&lt;/option>
+  &lt;option value="Other">Other&lt;/option>
+&lt;/select>
+</code></pre>
+            <p class="left-align">The output:</p>
+<pre><code style="padding-bottom:30px">
+  <label for="hometown">Hometown:</label>
+  <select name="hometown" id="hometown" style="font-size:18px; width:200px">
+    <option value="Cleveland">Cleveland</option>
+    <option value="Columbus">Columbus</option>
+    <option value="Other">Other</option>
+  </select>
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Forms: Textarea</h3>
+          <p class="left-align">Use <span class="yellow">&lt;textarea></span> to display a larger text box.</p>
+          <p class="left-align">The code:</p>
+<pre><code>&lt;label for="favorites">Favorite Things:&lt;/label>
+&lt;textarea name="favorites" id="favorites">&lt;/textarea>
+</code></pre>
+          <p class="left-align">The output:</p>
+<pre><code style="padding-bottom:30px">
+  <label for="favorites">Favorite Things:</label>
+  <textarea name="favorites" id="favorites" style="width:400px; height:100px; margin-top:10px;"></textarea>
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Forms: Checkbox</h3>
+          <p class="left-align">Allow users to select one or more options.</p>
+          <p class="left-align">The code:</p>
+<pre style="width:100%"><code>&lt;label for="classes">GDI Classes Taken:&lt;/label>
+&lt;input type="checkbox" name="classes" value="newbie" />
+Newbie HTML/CSS
+&lt;input type="checkbox" name="classes" value="beyond" />
+Beyond the Basics of HTML/CSS
+</code></pre>
+          <p class="left-align">The output:</p>
+<pre style="width:100%"><code style="padding-bottom:30px">
+  <label for="classes">GDI Classes Taken:</label>
+  <input type="checkbox" name="classes" value="newbie" style="width:20px; height:20px;"/>Newbie HTML/CSS
+  <input type="checkbox" name="classes" value="beyond" style="width:20px; height:20px"/>Beyond the Basics of HTML/CSS
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Forms: Radio Button</h3>
+          <p class="left-align">Allow users to select only one option.</p>
+          <p class="left-align">The code:</p>
+<pre style="width:100%"><code>&lt;label for="classes">Favorite Columbus Coffee:&lt;/label>
+&lt;input type="radio" name="coffee" value="one-line" />
+One Line Coffee
+&lt;input type="radio" name="coffee" value="brioso" />
+Brioso
+</code></pre>
+          <p class="left-align">The output:</p>
+<pre style="width:100%"><code style="padding-bottom:30px">
+  <label for="coffee">Favorite Columbus Coffee:</label>
+  <input type="radio" name="coffee" value="one-line" style="width:20px; height:20px;"/>One Line Coffee
+  <input type="radio" name="coffee" value="brioso" style="width:20px; height:20px;"/>Brioso
+</code></pre>
+        </section>
+
+        <!-- Exercise -->
+        <section>
+          <h3>Let's Develop it!</h3>
+          <ul>
+            <li>Add a basic form (e.g. a contact form) to your site.</li>
+            <li>Add a table with some data.</li>
+          </ul>
+        </section>
+
+        <!-- Next Week -->
+        <section>
+          <h3>Next Up:</h3>
+          <div class="left-align">
+            <p class="yellow">Topics for next week:</p>
+            <ul>
+              <li>Creating a multi-column design.</li>
+              <li>Moving your local site to the web.</li>
+              <li>Extensive lab. Make your website awesome!</li>
+            </ul>
+            <br /><br />
+            <p class="yellow">Save the dates:</p>
+            <ul>
+              <li>Beyond the Basics of HTML/CSS: Tues, March 4th</li>
+              <li>Hack Night: Wed, February 26th</li>
+              <li>Code and Coffee: Tues, March 11th</li>
+            </ul>
+          </div>
+        </section>
+        
         <section>
           <h2>Questions?</h2>
-          <div style = "font-size:1200%; height:100%; margin-top:30%" class ="blue">?
-            <div class ="clear"></div></div>
+          <div style="font-size:1200%; height:100%; margin-top:30%" class ="blue">?
+            <div class="clear"></div></div>
         </section>
-      
+    
       </div>
-      
+
       <footer>
         <div class="copyright">
           HTML/CSS ~ Girl Develop It ~
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
         </div>
       </footer>
-		</div>
-
+		</div>        
 
 		<script src="reveal/lib/js/head.min.js"></script>
 		<script src="reveal/js/reveal.min.js"></script>
